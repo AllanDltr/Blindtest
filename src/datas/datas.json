@@ -1,0 +1,34 @@
+[
+    {
+        "title":"Rock",
+        "imgUrl":"./src/assets/logo_ph.jpg"
+    },
+    {
+        "title":"Pop",
+        "imgUrl":"./src/assets/logo_ph.jpg"
+    },
+    {
+        "title":"Electro",
+        "imgUrl":"./src/assets/logo_ph.jpg"
+    },
+    {
+        "title":"Rap",
+        "imgUrl":"./src/assets/logo_ph.jpg"
+    },
+    {
+        "title":"K-Pop",
+        "imgUrl":"./src/assets/logo_ph.jpg"
+    },
+    {
+        "title":"Animes",
+        "imgUrl":"./src/assets/logo_ph.jpg"
+    },
+    {
+        "title":"Eurodance",
+        "imgUrl":"./src/assets/logo_ph.jpg"
+    },
+    {
+        "title":"Classiques",
+        "imgUrl":"./src/assets/logo_ph.jpg"
+    }
+]

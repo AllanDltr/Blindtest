@@ -1,7 +1,24 @@
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+
+type category = {
+    title: string
+    imgUrl: string
+}
+
 export const Homepage = () => {
-const mostPopular = ["Rock", "Pop", "Electro", "Rap", "K-Pop", "Animes", "Eurodance", "Classiques"]
-const navigate = useNavigate()
+    const [data, setData] = useState<category[]>([])
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const response = await fetch('./src/datas/datas.json')
+            const jsonData = await response.json()
+            setData(jsonData)
+        }
+        fetchData()
+        console.log(data)
+    }, [])
 
     return (
         <div className="Homepage">
@@ -9,18 +26,18 @@ const navigate = useNavigate()
             <div className="Category1 w-screen mx-2 mb-5 relative">
                 <div className="MostPopular text-xl">Most Popular</div>
                 <div className="Rectangle1 w-[98%] h-[10%] border border-black flex">
-                    {mostPopular.map((category, index) => (
+                    {data.map((category) => (
                         <div className="SongCategory mx-5 my-2 w-[10%]"
-                            key={index}
+                            key={category.title}
                             onClick={() =>
-                                console.log("You clicked on " + category)
+                                console.log("You clicked on " + category.title)
                             }>
-                            <img className={`${category}Logo`} src="./src/assets/logo_ph.jpg" />
-                            <div className={`${category} text-center`}>{category}</div>
+                            <img className={`${category.title}Logo`} src={category.imgUrl} />
+                            <div className={`${category.title} text-center`}>{category.title}</div>
                         </div>
                     ))}
                 </div>
             </div>
-    </div>
+        </div>
     )
 }
