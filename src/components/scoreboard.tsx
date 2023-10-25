@@ -11,3 +11,5 @@ export const Scoreboard = () => {
         </div>
     );
 };
+
+// The idea here is to get datas (player's name and score) from the browser's local storage and display them in the scoreboard.

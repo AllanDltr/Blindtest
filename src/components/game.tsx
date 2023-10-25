@@ -6,3 +6,7 @@ export const Game = () => {
         </div>
     );
 };
+
+// The idea here is to show a timer while the player is playing the song.
+// When the timer reaches 0, it's hidden and instead there is the image of the album cover.
+// Under the album there is the artist and the title of the song.
