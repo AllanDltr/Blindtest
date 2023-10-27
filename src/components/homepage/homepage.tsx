@@ -1,11 +1,11 @@
 import { Navbar } from "../navbar.tsx"
-import { User } from "../user.tsx"
+import { Categories } from "../categories.tsx"
 
 export const Homepage = () => {
     return (
         <div className="Homepage">
             <Navbar />
-            <User />
+            <Categories />
         </div>
     );
 };
