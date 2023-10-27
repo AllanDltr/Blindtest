@@ -1,14 +1,20 @@
 export const Scoreboard = () => {
     return (
-        <div className="ScoreboardSection ml-5 top-[325px] absolute">
-            <div className="Background w-[150px] h-[300px] bg-zinc-300" />
-            <div className="Score w-[150px] top-[5px] absolute text-center text-xl  bg-zinc-300">Score</div>
-            <div className="LineSeparator w-[150px] top-[34px] absolute border border-black"></div>
-            <div className="PlayerList w-24 pl-1 text-xl">
-                <div className="Player1 top-[43px] absolute bg-zinc-300">Player 1</div>
-                <div className="Player2 top-[71px] absolute bg-zinc-300">Player 2</div>
+        <>
+            <div className="ScoreboardSection ml-5 top-[325px] absolute ">
+                <div className="Background w-[200px] h-[300px] bg-zinc-300">
+                    <div className="Score w-[200px] top-[5px]  text-center text-xl  bg-zinc-300">Score</div>
+                    <div className="LineSeparator w-[200px] top-[34px]  border border-black"></div>
+                    <div className="PlayerList w-[200px]  text-xl ">
+                        <div className="flex justify-between bg-zinc-300	">
+                            <div className="Player1 bg-zinc-300">Player 1</div>
+                            <div className="Player1 top-[43px]  bg-zinc-300">Score XXX</div>
+                        </div>
+                        <div className="Player2 top-[71px]  bg-zinc-300">Player 2</div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
