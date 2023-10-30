@@ -11,7 +11,9 @@ export const App =  () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Homepage/>} />
+          <Route path="/categories" element={<Homepage/>} />
           <Route path="/room" element={<Room/>} />
+          <Route path="/room/:category" element={<Room/>} />
           <Route path="/user" element={<User/>} />
         </Routes>
       </BrowserRouter>
