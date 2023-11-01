@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { Navbar } from "../navbar";
+import { Navbar } from "../header";
 import { useNavigate } from "react-router-dom";
+import { BlindTestButton } from "../buttons";
 
 export const User = () => {
     const navigate = useNavigate();
-    const playButton = document.getElementById('PlayButton') as HTMLButtonElement;
+    const playButton = document.getElementById('playButton') as HTMLButtonElement;
     const [isDisabled, setIsDisabled] = useState(true);
     const [pseudo, setPseudo] = useState('');
 
@@ -28,14 +29,14 @@ export const User = () => {
 
     function handleClick() {
         if (playButton) {
-            let count = 5;
+            let count = 3;
             const intervalStartingGame = setInterval(() => {
                 count--;
                 if (count === 0) {
                     handleStorePseudo();
                     clearInterval(intervalStartingGame);
-                    console.log('Game started!');
-                    playButton.textContent = 'Le jeu commence !';
+                    console.log("Ton pseudo est : " + pseudo);
+                    playButton.textContent = 'Pseudo enregistré !';
                     navigate(`/categories`)
 
                 } else {
@@ -55,9 +56,12 @@ export const User = () => {
                     </div>
                 </div>
             <div className="PlayButton mt-10 flex justify-center">
-                <button id="PlayButton" disabled={isDisabled} onClick={handleClick} className="bg-zinc-300 hover:bg-zinc-400 text-black font-bold py-2 px-4 rounded-full">
-                    Jouer
-                </button>
+                <BlindTestButton
+                    id="playButton"
+                    onClick={handleClick}
+                    disabled={isDisabled}
+                    insideText="Jouer"
+                />
             </div>
         </>
     );

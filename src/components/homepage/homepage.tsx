@@ -1,4 +1,4 @@
-import { Navbar } from "../navbar.tsx"
+import { Navbar } from "../header.tsx"
 import { Categories } from "../categories.tsx"
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";

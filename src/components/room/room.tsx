@@ -1,4 +1,4 @@
-import { Navbar } from "../navbar"
+import { Navbar } from "../header"
 import { Scoreboard } from "../scoreboard"
 import { Game } from "../game"
 import { Answers } from "../answers"

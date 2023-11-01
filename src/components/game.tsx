@@ -1,12 +1,31 @@
+import { BlindTestButton } from "./buttons";
+
 export const Game = () => {
+function handleClick() {
+    const playButton = document.getElementById('playButton') as HTMLButtonElement;
+    let count = 5;
+    const intervalStartingGame = setInterval(() => {
+        count--;
+        if (count === 0) {
+            clearInterval(intervalStartingGame);
+            playButton.textContent = 'Le jeu commence !';
+            // Add code here to start the game (display the first song, start the timer, etc.) on the server side.
+        } else {
+            playButton.textContent = "Le jeu commence dans : " + count.toString();
+            // Add code here to send the countdown to the other players.
+        }
+    }, 1000);
+}
+
     return (
-        <div className="CountdownSection w-[40%] h-[288px] mx-[35%] mb-10 relative bg-zinc-300">
+        <div className="CountdownSection w-[40%] h-[288px] mx-[35%] mb-10 relative bg-zinc-300 flex justify-center items-center">
             <div className="ImagePlaceholder w-full h-full bg-zinc-300" />
-            <div className="Countdown w-full top-[130px] flex justify-center items-center absolute  bg-zinc-300 text-xl">Timer</div>
+            <BlindTestButton
+                id="playButton"
+                onClick={handleClick}
+                insideText="Jouer"
+                disabled={false}
+            />
         </div>
     );
 };
-
-// The idea here is to show a timer while the player is playing the song.
-// When the timer reaches 0, it's hidden and instead there is the image of the album cover.
-// Under the album there is the artist and the title of the song.
