@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Navbar } from "../header";
 import { useNavigate } from "react-router-dom";
 import { BlindTestButton } from "../blindtestButtonAll";
+import { Input } from "@/components/ui/input"
+
 
 export const User = () => {
     const navigate = useNavigate();
@@ -51,8 +53,8 @@ export const User = () => {
         <Navbar/>
             <div className="UserSection flex justify-center h-10 text-center ">
                 <div className="Artist w-20 text-xl border-2 border-black rounded-lg mx-2">Pseudo </div>
-                    <div className="Nickname w-60 text-xl border-2 border-black rounded-lg mx-2">
-                        <input type="text" placeholder="Insérez votre pseudo" value={pseudo} onChange={handlePseudoChange} />
+                    <div className="Nickname">
+                        <Input type="text" placeholder="Insérez votre pseudo" value={pseudo} onChange={handlePseudoChange} />
                     </div>
                 </div>
             <div className="PlayButton mt-10 flex justify-center">

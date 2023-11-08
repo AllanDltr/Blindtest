@@ -1,13 +1,16 @@
+import { Input } from "@/components/ui/input"
+import { Badge } from "@/components/ui/badge"
+
 export const Answers = () => {
     return (
         <div className="AnswerSection mx-[45%] relative">
-          <div className="Artist w-20 h-10 absolute text-xl border-2 border-black rounded-lg text-center align-middle	"> Artiste </div>
-          <div className="ArtistAnswer w-60 h-10 left-[100px]  absolute border-2 border-black rounded-lg  text-black text-opacity-50 text-xl ">
-            <input type="text" placeholder="Sean Paul"/>
+          <Badge className="Artist w-20 h-10 absolute text-xl border-black rounded-lg"> Artiste </Badge>
+          <div className="ArtistAnswer w-60 h-10 left-[100px] absolute">
+            <Input type="text" placeholder="Sean Paul"/>
           </div>
-          <div className="Title w-20 h-10 top-[63px] text-xl border-2 border-black rounded-lg absolute text-center">Titre</div>
-          <div className="AnswerTitle w-60 h-10 left-[100px] top-[63px] absolute border-2  border-black rounded-lg text-black text-opacity-50 text-xl">
-            <input type="text" placeholder="Temperature"/>
+          <Badge className="Title w-20 h-10 top-[63px] text-xl border-black rounded-lg absolute">Titre</Badge>
+          <div className="AnswerTitle w-60 h-10 left-[100px] top-[63px] absolute">
+            <Input type="text" placeholder="Temperature"/>
           </div>
         </div>
     );
