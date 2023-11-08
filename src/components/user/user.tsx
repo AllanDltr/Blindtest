@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Navbar } from "../header";
 import { useNavigate } from "react-router-dom";
-import { BlindTestButton } from "../buttons";
+import { BlindTestButton } from "../blindtestButtonAll";
 
 export const User = () => {
     const navigate = useNavigate();

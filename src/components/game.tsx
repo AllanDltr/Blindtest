@@ -1,4 +1,4 @@
-import { BlindTestButton } from "./buttons";
+import { BlindTestButton } from "./blindtestButtonAll";
 
 export const Game = () => {
 function handleClick() {
@@ -21,10 +21,10 @@ function handleClick() {
         <div className="CountdownSection w-[40%] h-[288px] mx-[35%] mb-10 relative bg-zinc-300 flex justify-center items-center">
             <div className="ImagePlaceholder w-full h-full bg-zinc-300" />
             <BlindTestButton
-                id="playButton"
-                onClick={handleClick}
-                insideText="Jouer"
-                disabled={false}
+                // id="playButton"
+                // onClick={handleClick}
+                // insideText="Jouer"
+                // disabled={false}
             />
         </div>
     );
